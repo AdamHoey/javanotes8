@@ -11,6 +11,11 @@
  * This program will simulate rolling a pair of dice multiple times until
  * the dice come up "snake eyes," then report the number of rolls required.
  */
+
+/**
+ * Version 1.1: Improved cross-platform compatibility for carriage returns.
+ */
+ 
 import textio.TextIO;
 
 public class SnakeEyes {
@@ -22,7 +27,8 @@ public class SnakeEyes {
 
     /* Introduce the program to the user */
 
-    System.out.println("\nThis program will simulate and count the number of");
+    System.out.println();
+    System.out.println("This program will simulate and count the number of");
     System.out.println("rolls of a pair of dice until they come up \"snake");
     System.out.println("eyes.\"");
 
@@ -42,12 +48,16 @@ public class SnakeEyes {
 
       /* Report the number of rolls and offer to run again */
 
-      System.out.println("\n\nThe number of rolls until \"snake eyes\" came up was "
+      System.out.println();
+      System.out.println();
+      System.out.println("The number of rolls until \"snake eyes\" came up was "
         + counter + "!");
       System.out.print("Would you like to run the experiment again? (y/n) :");
       rollAgain = TextIO.getlnBoolean();
     }
-    System.out.println("\nOK. See you next time!\n");
+    System.out.println();
+    System.out.println("OK. See you next time!");
+    System.out.println();
 
   } // end main()
 } // end class SnakeEyes

@@ -18,6 +18,10 @@
  * divisors, only the largest integer that has that max number will be printed.
  */
 
+ /**
+  * Version 1.1: Improved cross-platform compatibility for carriage returns.
+  */
+
 public class MostDivisors {
 
   public static void main(String[] args) {
@@ -40,8 +44,10 @@ public class MostDivisors {
 
     /* Print results */
 
-    System.out.println("\nThe integer between 1 and 10,000 that has the most");
-    System.out.println("divisors (at " + maxDiv + ") is " + maxInt + ".\n");
+    System.out.println();
+    System.out.println("The integer between 1 and 10,000 that has the most");
+    System.out.println("divisors (at " + maxDiv + ") is " + maxInt + ".");
+    System.out.println();
 
   } // end main()
 } // end class MostDivisors
