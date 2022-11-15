@@ -35,7 +35,7 @@ equivalent.
 
 import textio.TextIO;
 
-public class hexConverter {
+public class HexConverter {
 
   public static void main(String[] args) {
 
@@ -98,4 +98,4 @@ public class hexConverter {
     }
   } // end hexValue()
 
-} // end class hexConverter
+} // end class HexConverter
