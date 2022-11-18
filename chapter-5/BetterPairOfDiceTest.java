@@ -15,11 +15,13 @@ import textio.TextIO;
 
 public class BetterPairOfDiceTest {
 
-  static final int SNAKE_EYES = 2;
+  static final int SNAKE_EYES = 2; // named constant for pair of 1s
 
   public static void main(String[] args) {
 
-    boolean rollAgain = true;
+    boolean rollAgain = true;   // prime outer while loop test
+    BetterPairOfDice dice = new BetterPairOfDice(); // create object from
+                                                    // BetterPairOfDice
 
     /* Introduce the program to the user */
 
@@ -29,19 +31,17 @@ public class BetterPairOfDiceTest {
     System.out.println("eyes.\" Press return to begin.");
     TextIO.getln();
 
-    BetterPairOfDice dice = new BetterPairOfDice();
-
+    /* Loop while user wants to repeat experiment */
     while (rollAgain) {
       int counter = 0;
-      do {
+      do {              // must be do..while to roll dice at least once
         dice.roll();
         counter++;
       } while ((dice.getDie1() + dice.getDie2()) != SNAKE_EYES);
       System.out.println("The dice are " + dice + " after " + counter
-        + " rolls.");
+        + " rolls.");  // implicitly calls BetterPairOfDice.toString()
         System.out.print("Roll again? (y/n): ");
         rollAgain = TextIO.getlnBoolean();
-
     } // end outer while()
 
     System.out.println();
